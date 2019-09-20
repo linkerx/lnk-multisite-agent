@@ -18,7 +18,7 @@ function lnk_multisite_agent_metadata($id, $post) {
     update_post_meta($post->ID, 'lnk_featured_mode', 0); //modo de impresion de destacado
     update_post_meta($post->ID, 'lnk_onagenda',0); //publicacion en agenda
     update_post_meta($post->ID, 'lnk_agenda',0); //fecha de publicacion en agenda
-    update_post_meta($post->ID, 'lnk_socialpost',0); //publicacion en redes sociales
+    update_post_meta($post->ID, 'lnk_facebook_count',0); //publicacion en redes sociales
 
 }
 add_action('publish_post', 'lnk_multisite_agent_metadata', 10, 2 );
