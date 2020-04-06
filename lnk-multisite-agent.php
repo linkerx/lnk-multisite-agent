@@ -23,4 +23,4 @@ function lnk_multisite_agent_metadata($id, $post) {
         update_post_meta( $post->ID, 'lnk_site_metadata',"" ); //otros datos propios del sitio
     }
 }
-add_action('publish_post', 'lnk_multisite_agent_metadata', 10, 2 );
+add_action('new_to_publish', 'lnk_multisite_agent_metadata', 10, 2 );
