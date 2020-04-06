@@ -21,6 +21,7 @@ function lnk_multisite_agent_metadata($id, $post) {
         update_post_meta( $post->ID, 'lnk_agenda',0 ); //fecha de publicacion en agenda
         update_post_meta( $post->ID, 'lnk_facebook_count',0 ); //publicacion en redes sociales
         update_post_meta( $post->ID, 'lnk_site_metadata',"" ); //otros datos propios del sitio
+        update_post_meta($post->ID, 'lnk_compartido,""'); //compartido con otros subsitios
     }
 }
 add_action('new_to_publish', 'lnk_multisite_agent_metadata', 10, 2 );
