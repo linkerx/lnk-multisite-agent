@@ -10,7 +10,7 @@
  * License: GPLv3
  */
 
-function lnk_multisite_agent_metadata($id, $post) {
+function lnk_multisite_agent_metadata($post) {
 
     if( !wp_is_post_revision( $post->ID ) ) {
         update_post_meta( $post->ID, 'lnk_checked', 0 ); //revisado por manager
@@ -24,4 +24,4 @@ function lnk_multisite_agent_metadata($id, $post) {
         update_post_meta($post->ID, 'lnk_compartido,""'); //compartido con otros subsitios
     }
 }
-add_action('new_to_publish', 'lnk_multisite_agent_metadata', 10, 2 );
+add_action('new_to_publish', 'lnk_multisite_agent_metadata', 10, 1 );
