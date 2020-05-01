@@ -12,7 +12,7 @@
 
 function lnk_multisite_agent_metadata($post) {
 
-    $tipos = json_decode(get_option('lnk_agent_post_types',"['post']"));
+    $tipos = json_decode(get_option('lnk_agent_post_types',"['post']"),true);
     if(in_array($post->post_type,$tipos)){
         if( !wp_is_post_revision( $post->ID ) ) {
             update_post_meta( $post->ID, 'lnk_checked', 0 ); //revisado por manager
